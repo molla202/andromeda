@@ -147,3 +147,15 @@ andromedad tx staking create-validator \
 --gas auto --gas-adjustment 1.5 \
 -y
 ```
+
+### Sime 
+```
+sudo systemctl stop andromedad
+sudo systemctl disable andromedad
+sudo rm -rf /etc/systemd/system/andromedad.service
+sudo rm $(which andromedad)
+sudo rm -rf $HOME/.andromedad
+sudo rm -rf $HOME/andromedad
+sudo rm -rf $HOME/andromeda
+sed -i "/ANDROMEDA_/d" $HOME/.bash_profile
+```
